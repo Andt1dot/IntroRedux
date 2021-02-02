@@ -1,30 +1,18 @@
-export const FETCH_LOCATION = 'FETCH_LOCATION'
+export const FETCH_LOCATION = "FETCH_LOCATION";
 
+export const fetchLocation = (dispatch) => ({
+type:"FETCH_LOCATION",
+payload:{a:"o mers"}
 
-export const fetchLocation = (dispatch) => {
- 
+     // console.log("AM INTART in ActionLocation"),
+//   fetch("http://ip-api.com/json/?fields=61439")
+//     .then((res) => res.json())
+//     .then((location) => {
+//       dispatch({
+//         type: FETCH_LOCATION,
+//         paylod: location,
+//       });
+//     });
 
-console.log("AM INTART in ActionLocation")
-fetch ('http://ip-api.com/json/?fields=61439').then((res)=> res.json()).then((location) => {
-
- dispatch({      
-     type: FETCH_LOCATION,
-     paylod: location
- })
-
- 
-})   
-    
-/// query
-
-
-
-
-
-}
-
-
-
-
-
-
+  /// query
+});
