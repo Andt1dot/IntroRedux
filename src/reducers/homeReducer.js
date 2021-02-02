@@ -5,9 +5,9 @@ const initialState = {
 };
 
 export const homeReducer = (state = initialState, action) => {
-  console.log("action este = ", action.payload);
   switch (action.type) {
     case FETCH_LOCATION:
+      console.log("action este = ", action.payload);
       return { ...state, location: action.payload };
 
     default:

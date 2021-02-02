@@ -2,17 +2,29 @@ import { connect } from "react-redux";
 import { fetchLocation } from "../actions/actionLocation";
 
 const ContentHome = (props) => {
-  const handleClick = (e) => {
-    console.log("Accesat");
-    props.testVlad();
+  // setTimeout(function(){   props.fetchLocation(); }, 2000);
+  const loading = () => {
+    props.fetchLocation();
   };
-  return <div onClick={handleClick}>Your location is : = {"este"}</div>;
+  return (
+    <div>
+      <button onClick={loading}>Click for Start</button>
+
+      {Object.keys(props.location).length === 0 ? (
+        <h1>Loading...</h1>
+      ) : (
+        <div>
+          <div>Your country is : {JSON.stringify(props.location.country)}</div>
+          <div>Your city is : {JSON.stringify(props.location.city)}</div>
+        </div>
+      )}
+    </div>
+  );
 };
 
 const mapDispatchToProps = {
-  testVlad: fetchLocation,
+  fetchLocation,
 };
-
 const mapStateToProps = (state) => {
   return { location: state.location };
 };
