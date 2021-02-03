@@ -43,6 +43,6 @@
   flex-direction: row;
   justify-content: space-around;
   height: 30px;
-  background-image: linear-gradient(to right, purple, yellow);
+  background-image: linear-gradient(to right, rgb(173, 0, 173), yellow);
   text-decoration: none;
 }
