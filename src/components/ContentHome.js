@@ -11,7 +11,6 @@ const ContentHome = (props) => {
 
   return (
     <div>
-    
       {Object.keys(props.location).length === 0 ? (
         <h1>Loading...</h1>
       ) : (
