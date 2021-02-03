@@ -2,14 +2,13 @@ import { connect } from "react-redux";
 import { fetchLocation } from "../actions/actionLocation";
 import React from "react";
 const ContentHome = (props) => {
-
   React.useEffect(() => {
-     props.fetchLocation();
-   },[]);
+    props.fetchLocation();
+  }, []);
 
   return (
     <div>
-      <button >Click for Start</button>
+      <button>Click for Start</button>
 
       {Object.keys(props.location).length === 0 ? (
         <h1>Loading...</h1>
