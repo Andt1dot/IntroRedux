@@ -14,15 +14,4 @@ export const fetchLocation = () => (dispatch) => {
 };
 
 
-// export const fetchFlags = (query) => (dispatch) => {
-// fetch(`https://www.countryflags.io/${query}/shiny/64.png`).then((res)=>res.json()).then((flag)=>{
-//   dispatch({
-//     type: FETCH_FLAGS,
-//     payload: flag,
-//   }); 
-
-// })
-// };
-
-
 
