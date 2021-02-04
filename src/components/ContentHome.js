@@ -17,7 +17,7 @@ const ContentHome = (props) => {
       ) : (
         <div>
           <div>Your country is : {JSON.stringify(props.location.country)}</div>
-          <div>Your city is : {JSON.stringify(props.location)}</div>
+          <div>Now you are in : {JSON.stringify(props.location.city)}</div>
          <img src={`https://www.countryflags.io/${props.location.countryCode}/shiny/64.png`}></img>
         </div>
       )
