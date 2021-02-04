@@ -1,3 +1,6 @@
+body {
+  background-color: rgba(2, 194, 79, 0.411);
+}
 .App {
   text-align: center;
 }
@@ -38,11 +41,23 @@
 }
 
 .nav {
-
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   height: 30px;
-  background-image: linear-gradient(to right, rgb(173, 0, 173), yellow);
+  background-image: linear-gradient(to right, rgb(219, 109, 19), #009c2f);
   text-decoration: none;
+}
+.link-element,
+li {
+  color: rgb(145, 245, 236);
+  text-decoration: none;
+  list-style-type: none;
+  font-weight: 600;
+  
+}
+.link-element:hover {
+  color: black;
+  text-shadow: 0 0 2px #03e9f4, 0 0 5px #03e9f4, 0 0 5px #03e9f4, 0 0 10px #03e9f4;
+  
 }
