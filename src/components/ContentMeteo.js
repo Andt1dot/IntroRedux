@@ -1,12 +1,15 @@
 import { useEffect } from "react";
 import { connect } from "react-redux";
 import { fetchMeteo } from "../actions/actionMeteo";
+//import { fetchLocation} from "../actions/actionLocation";
+
 
 const ContentMeteo = (props) => {
-  console.log("SalutAici", props);
 
   useEffect(() => {
+    
     props.fetchMeteo();
+   // props.fetchLocation();
   }, []);
 
   return (
@@ -38,7 +41,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = {
-  fetchMeteo,
+  fetchMeteo
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContentMeteo);

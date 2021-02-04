@@ -1,7 +1,9 @@
+import ContentExchange from '../components/ContentExchange'
+
 
 const Exchange = () =>{
 
-return (<div>This Exchange Page</div>);
+return (<ContentExchange/>);
 
 } 
 

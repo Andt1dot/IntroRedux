@@ -16,6 +16,7 @@ const reduser = combineReducers({
 });
 
 const store = createStore(reduser, applyMiddleware(thunk));
+
 function App() {
   return (
     <div className="App">
