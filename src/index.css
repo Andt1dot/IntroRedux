@@ -136,13 +136,24 @@ h2 a {
     display: none;
   }
 }
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 .home-pge {
+  font-family: 'Yusei Magic', sans-serif;
   color: rgb(245, 238, 199);
-  font-weight: 700;
-  background-image: url("https://i.pinimg.com/originals/2d/79/03/2d7903fbbd8afc7fc3a057a7c409d20e.jpg");
-  height: 28em;
+  font-weight: 500;
+  background-image: url("https://i.pinimg.com/originals/19/ad/8f/19ad8f42452a1bd10f9a177b2c41cd30.jpg");
+  height: 100%;
   background-size: 100% ;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+}
+.footer {
+  position: fixed;
+  height: 50px;
+  background-color: rgb(7, 8, 36)(216, 205, 205);
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
 }

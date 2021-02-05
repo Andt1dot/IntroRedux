@@ -7,7 +7,6 @@ const ContentHome = (props) => {
     props.fetchLocation();
   }, []);
 
-  console.log(props);
   return (
     <div>
       {Object.keys(props.location).length === 0 ? (
@@ -27,7 +26,7 @@ const ContentHome = (props) => {
 
 const mapDispatchToProps = {
   fetchLocation,
-};
+}
 const mapStateToProps = (state) => {
   return { location: state.homeReducer.location };
 };

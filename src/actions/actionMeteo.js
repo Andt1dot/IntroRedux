@@ -2,14 +2,16 @@ import { fetchLocation } from "./actionLocation";
 export const FETCH_METEO = "FETCH_METEO";
 
 export const fetchMeteo = (query) => (dispatch, getState) => {
+ 
+  console.log(dispatch);
+
   const state = getState();
-  /*  console.log("state before dispatch-", state.homeReducer);
-  state.dispatch(fetchLocation);
-  console.log("state after dispatch-", state);
-*/
+
   Object.keys(state.homeReducer.location).length === 0
     ? console.log("state is empty")
-    : console.log("state", state.homeReducer.location); ///.city
+    : console.log("state", state.homeReducer.location);
+
+  
   fetch(
     `http://api.openweathermap.org/data/2.5/weather?q=${"chisinau"}&appid=60863f88c34e274c330b04f9cdd90e7d&units=metric`
   )

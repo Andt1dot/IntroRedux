@@ -1,6 +1,10 @@
-import ContentMeteo from '../components/ContentMeteo'
-
+import ContentMeteo from "../components/ContentMeteo";
+import "../index.css";
 const Meteo = (props) => {
-  return(<ContentMeteo/>);
-  }
+  return (
+    <div className="home-pge">
+      <ContentMeteo />
+    </div>
+  );
+};
 export default Meteo;
