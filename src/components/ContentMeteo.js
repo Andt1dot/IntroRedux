@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { connect } from "react-redux";
 import { fetchMeteo } from "../actions/actionMeteo";
 const ContentMeteo = (props) => {
+
   useEffect(() => {
     props.fetchMeteo();
   }, []);

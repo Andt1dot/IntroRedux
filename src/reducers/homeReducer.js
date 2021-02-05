@@ -1,6 +1,4 @@
 import {FETCH_LOCATION } from "../actions/actionLocation";
-
-
 const initialState = {
   location: {},
   error: ""

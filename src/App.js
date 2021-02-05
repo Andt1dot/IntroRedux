@@ -21,7 +21,7 @@ const store = createStore(reduser, applyMiddleware(thunk));
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" >
       <Provider store={store}>
         <BrowserRouter>
           <nav className="nav">
@@ -54,7 +54,7 @@ function App() {
               <Home />
             </Route>
           </Switch>
-          <h3>Footer info</h3>
+    
         </BrowserRouter>
       </Provider>
     </div>
