@@ -2,10 +2,11 @@ import { useEffect } from "react";
 import { connect } from "react-redux";
 import { fetchMeteo } from "../actions/actionMeteo";
 const ContentMeteo = (props) => {
-
   useEffect(() => {
     props.fetchMeteo();
   }, []);
+
+  console.log('meteo loading', Object.keys(props.meteo).length === 0, props.meteo);
 
   return (
     <div>
@@ -16,7 +17,7 @@ const ContentMeteo = (props) => {
           <div>Country: {JSON.stringify(props.meteo.sys.country)}</div>
           <div>City: {JSON.stringify(props.meteo.name)}</div>
           <div>Temp: {JSON.stringify(props.meteo.main.temp)} ℃</div>
-          <div>Humidity: {JSON.stringify(props.meteo.main.humidity)}</div>
+          <div>Humidity: {JSON.stringify(props.meteo.main.humidity)} %</div>
           <div>Weather: {JSON.stringify(props.meteo.weather[0].main)}</div>
         </div>
       )}
@@ -32,7 +33,9 @@ const ContentMeteo = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  return { meteo: state.meteoReducer.meteo };
+  return {
+    meteo: state.meteoReducer.meteo,
+  };
 };
 
 const mapDispatchToProps = {
