@@ -18,6 +18,7 @@ const ContentHome = (props) => {
           <img
             src={`https://www.countryflags.io/${props.location.countryCode}/shiny/64.png`}
           ></img>
+          <h1>Page currently in progress</h1>
         </div>
       )}
     </div>

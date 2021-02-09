@@ -137,17 +137,7 @@ h2 a {
   }
 }
 @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
-.home-pge {
-  font-family: 'Yusei Magic', sans-serif;
-  color: rgb(245, 238, 199);
-  font-weight: 500;
-  background-image: url("https://i.pinimg.com/originals/19/ad/8f/19ad8f42452a1bd10f9a177b2c41cd30.jpg");
-  height: 100%;
-  background-size: 100% ;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-}
+
 .footer {
   position: fixed;
   height: 50px;
