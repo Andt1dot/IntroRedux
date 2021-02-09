@@ -3,7 +3,7 @@ import "../index.css";
 
 const Home = () => {
   return (
-    <div className="home-pge" >
+    <div className="bg-pge" >
       <ContentHome />
       <div>
      
