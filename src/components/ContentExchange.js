@@ -6,7 +6,6 @@ const ContentExchange = (props) => {
   React.useEffect(() => {
     props.fetchExchange();
   }, []);
-  //console.log("exchange-", props.exchangeData.conversion_rates);
 
   return Object.keys(props.exchangeData).length === 0 ? (
     <h1>Loading...</h1>
@@ -29,9 +28,9 @@ const ContentExchange = (props) => {
       <tbody>
         <tr>
          
-          <td>{parseFloat(1/(props.exchangeData.conversion_rates.EUR)).toFixed(2)} MDL</td>
-          <td>{parseFloat(1/(props.exchangeData.conversion_rates.USD)).toFixed(2)} MDL</td>
-          <td>{parseFloat(1/(props.exchangeData.conversion_rates.RUB)).toFixed(2)} MDL</td>
+          <td>{parseFloat(1/(props.exchangeData.eur.rate)).toFixed(2)} MDL</td>
+          <td>{parseFloat(1/(props.exchangeData.usd.rate)).toFixed(2)} MDL</td>
+          <td>{parseFloat(1/(props.exchangeData.rub.rate)).toFixed(2)} MDL</td>
         </tr>
       </tbody>
     </table>

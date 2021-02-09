@@ -2,7 +2,7 @@ export const FETCH_EXCHANGE = "FETCH_EXCHANGE";
 
 export const fetchExchange = () => (dispatch) => {
   fetch(
-    "https://v6.exchangerate-api.com/v6/3f719d9de282b750dbabfe45/latest/MDL"
+    "http://www.floatrates.com/daily/mdl.json"
   )
     .then((res) => res.json())
     .then((exchange) => {
