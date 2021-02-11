@@ -10,8 +10,6 @@ export const fetchMeteo = () => async (dispatch, getState) => {
     city = foundCity;
   }
 
- /// console.log("city", city);
-
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=60863f88c34e274c330b04f9cdd90e7d&units=metric`
   )
@@ -24,8 +22,6 @@ export const fetchMeteo = () => async (dispatch, getState) => {
     });
 };
 export const fetchInputMeteo = (query) => async (dispatch) => {
-  console.log("querry", query);
-
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=60863f88c34e274c330b04f9cdd90e7d&units=metric`
   )
@@ -35,5 +31,6 @@ export const fetchInputMeteo = (query) => async (dispatch) => {
         type: FETCH_METEO,
         payload: meteo,
       });
-    });
+    })
+    .catch(console.error());
 };

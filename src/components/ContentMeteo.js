@@ -1,17 +1,13 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { fetchMeteo,fetchInputMeteo } from "../actions/actionMeteo";
+import { fetchMeteo, fetchInputMeteo } from "../actions/actionMeteo";
+import "../index.css";
 
 const ContentMeteo = (props) => {
   useEffect(() => {
     props.fetchMeteo();
   }, []);
 
-  console.log(
-    "meteo loading",
-    Object.keys(props.meteo).length === 0,
-    props.meteo
-  );
   const getInputData = (e) => {
     e.preventDefault();
     console.log(textinput.current.value);
@@ -22,15 +18,16 @@ const ContentMeteo = (props) => {
   return (
     <div>
       {Object.keys(props.meteo).length === 0 ? (
-        <h1>Loading...</h1>
-      ) : props.meteo.cod === "404" || props.meteo.cod === "400" ? (
-        <h3>{props.meteo.message}...</h3>
+        <h1 className="warning">Loading...</h1>
+      ) : props.meteo.cod != "200" ? (
+        <h3 className="warning">{props.meteo.message}...</h3>
       ) : (
-        <div>
+        <div className="meteoData">
           <div>Country: {JSON.stringify(props.meteo.sys.country)}</div>
           <div>City: {JSON.stringify(props.meteo.name)}</div>
           <div>Temp: {JSON.stringify(props.meteo.main.temp)} ℃</div>
           <div>Humidity: {JSON.stringify(props.meteo.main.humidity)} %</div>
+          <div>Pressure: {JSON.stringify(props.meteo.main.pressure)}</div>
           <div>Weather: {JSON.stringify(props.meteo.weather[0].main)}</div>
         </div>
       )}
@@ -53,7 +50,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
   fetchMeteo,
-  fetchInputMeteo
+  fetchInputMeteo,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContentMeteo);
