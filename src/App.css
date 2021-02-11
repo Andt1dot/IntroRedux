@@ -1,9 +1,10 @@
 body {
-  background-color: rgba(2, 194, 79, 0.411);
+  background-color: rgb(0, 38, 119); color :white
 }
 .App {
   text-align: center;
   height: 800px;
+ 
 }
 
 .App-logo {
