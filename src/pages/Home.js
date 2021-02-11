@@ -3,7 +3,6 @@ import "../index.css";
 
 const Home = () => {
   return (
-
       <ContentHome />
   );
 };
