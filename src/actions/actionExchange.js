@@ -2,7 +2,7 @@ export const FETCH_EXCHANGE = "FETCH_EXCHANGE";
 
 export const fetchExchange = () => (dispatch) => {
   fetch(
-    "http://www.floatrates.com/daily/mdl.json"
+    "https://www.floatrates.com/daily/mdl.json"
   )
     .then((res) => res.json())
     .then((exchange) => {
