@@ -147,3 +147,12 @@ h2 a {
   right: 0px;
   margin-bottom: 0px;
 }
+.warning{
+  color:rgb(128, 0, 0);
+  text-shadow: 0 0 2px #03e9f4, 0 0 5px #03e9f4, 0 0 5px #03e9f4, 0 0 10px #03e9f4;
+  
+}
+.meteoData{
+  font-weight: 500;
+  color:burlywood
+}

@@ -5,7 +5,6 @@ export const fetchLocation = () => (dispatch) => {
   )
     .then((res) => res.json())
     .then((location) => {
-      console.log("locu", location.country_code);
       dispatch({
         type: FETCH_LOCATION,
         payload: location,
