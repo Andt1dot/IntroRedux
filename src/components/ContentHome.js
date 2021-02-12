@@ -13,12 +13,18 @@ const ContentHome = (props) => {
         <h1>Loading...</h1>
       ) : (
         <div>
-          <div>Your country is : {JSON.stringify(props.location.country)}</div>
-          <div>Now you are in : {JSON.stringify(props.location.city)}</div>
+          <div className="homePageInfo">
+            <div>Your country code is : {props.location.country}</div>
+            <div>Now you are in : {props.location.city}</div>
+          </div>
           <img
+            className="homePageStema"
             src={`https://www.countryflags.io/${props.location.country_code}/shiny/64.png`}
           ></img>
-          <h1>Page currently in progress</h1>
+          <h3 className="homePageMessage">
+            Hi, we used your IP address to detect your location. This will allow
+            me to provide you with country data and other weather data
+          </h3>
         </div>
       )}
     </div>
@@ -27,7 +33,7 @@ const ContentHome = (props) => {
 
 const mapDispatchToProps = {
   fetchLocation,
-}
+};
 const mapStateToProps = (state) => {
   return { location: state.homeReducer.location };
 };
